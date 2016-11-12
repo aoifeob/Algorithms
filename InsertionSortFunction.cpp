@@ -58,13 +58,5 @@ cout<<data_InsSort[i];
 }
 cout<<"\n";
 
-//Quick Sort the array
-
-
-for ( i=0; i<size_array; i++){
-cout<<data_Quicksort[i];
-}
-cout<<"\n";
-
 return 0;
 }
