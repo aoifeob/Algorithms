@@ -11,7 +11,7 @@ int i, j; //counter
 
 
 // make arrays
-int data[8] = {1, 5, 7, 8, 4, 6, 3, 2};
+int data[8] = {1, 6, 2, 8, 4, 5, 3, 7};
 
 int data_InsSort[8]; // array sorted by insertion sort
 
