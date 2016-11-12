@@ -37,9 +37,6 @@ int data[8] = {1, 6, 2, 8, 4, 5, 3, 7};
 int data_InsSort[8]; // array sorted by insertion sort
 copy(data, data+8, data_InsSort);
 
-int data_Quicksort[8]; // array sorted by quicksort
-
-
 //get the length of the arrays
 size_array = (sizeof(data)/sizeof(*data));
 
