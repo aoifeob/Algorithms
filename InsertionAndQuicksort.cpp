@@ -3,8 +3,6 @@
 
 using namespace std;
 
-int QuicksortCount= 0;
-
 int InsSort(int *data, int *data_InsSort){
 
     //Insertion sort the array
@@ -52,6 +50,8 @@ int Subdivide_array (int *data_Quicksort, int A, int Z, int QuicksortCount){
 return wall;
 }
 
+
+// tested making a counting function but it messed up the sorting
 /*int Counter (int *data_Quicksort, int false_A, int false_Z, int QuicksortCount){
    //repeating part of our Subdivide function to return QuicksortCount, a highly inefficient implementation
     int false_pivot = data_Quicksort[false_Z];
@@ -77,9 +77,10 @@ int Quicksort(int *data_Quicksort, int A, int Z, int QuicksortCount){
     //let A be the start of the array, and Z be the end of the array
     int false_A = A;
     int false_Z = Z;
-    if (A<Z){ //partition until we get individual segments
+    if (A<Z){ //subdivide and sort until we get individual segments
         int wall = Subdivide_array(data_Quicksort, A, Z, QuicksortCount); //subdivide the array
-        //int QuicksortCount = Counter(data_Quicksort, false_A, false_Z, QuicksortCount);
+        //int QuicksortCount = Counter(data_Quicksort, false_A, false_Z, QuicksortCount); this method messes up the sorting
+        
         //recursion to repeat the process until each subdivision is one element long and is therefore sorted
         Quicksort(data_Quicksort, A, wall-1, QuicksortCount); // repeat process for elements less than the pivot
         Quicksort(data_Quicksort, wall+1, Z, QuicksortCount); // repeat process for elements greater than the pivot
@@ -90,7 +91,7 @@ int Quicksort(int *data_Quicksort, int A, int Z, int QuicksortCount){
 
 int main(){
     int A, Z;
-    //int QuicksortCount= 0;
+    int QuicksortCount= 0;
 
     // make arrays
     int data[ARRAY_LENGTH] = {1, 6, 2, 8, 4, 5, 3, 7};
