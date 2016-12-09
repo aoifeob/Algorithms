@@ -1,6 +1,3 @@
-//Aoife O' Brien
-//29th November 2016
-
 //start of header guard
 #ifndef TREENODE_H
 #define TREENODE_H
