@@ -1,6 +1,3 @@
-//Aoife O' Brien
-//Nov 29th 2016
-
 /*
 Tree visualisation:
 
@@ -44,7 +41,6 @@ void tree_insert( Tree_Node* root, char data){
             else{
                 //if no left child exists, create the new node as a left child
                 root->left = new Tree_Node;
-                root = root->left;
                 root->data = data;
                 root->left = NULL;
                 root->right = NULL;
@@ -57,7 +53,6 @@ void tree_insert( Tree_Node* root, char data){
             }
             else{
                 root->right = new Tree_Node;
-                root = root->right;
                 root->data = data;
                 root->left = NULL;
                 root->right = NULL;
@@ -98,9 +93,6 @@ void tree_print_sorted(Tree_Node* root){
 }
 
 int main(){
-    //create a pointer to represent the root
-    Tree_Node* root = (Tree_Node*)malloc(sizeof(Tree_Node));
-    root = NULL;
     tree_insert(root, 110);
     tree_insert(root, 73);
     tree_insert(root, 115);
