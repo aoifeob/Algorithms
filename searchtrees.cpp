@@ -87,7 +87,7 @@ void tree_print_sorted(Tree_Node* root){
     if (root!=NULL){
         tree_print_sorted(root->left);
         cout<< root->data;
-        cout<<" /n";
+        cout<<" \n";
         tree_print_sorted(root->right);
     }
 }
