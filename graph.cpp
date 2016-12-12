@@ -42,18 +42,15 @@ void newEdge(struct Graph* graph, int source, int data, int weight){
 }
 
 bool dfs(Graph* graph, char start_at, char find_value){
-    for (int i=0;i<12;i++){
-           
-    }
           
         if (start_at==find_value){
             return 1;
         }
        else{
-            if ("start at hasn't been visited"){   
+            if (graph[start_index].visited == false){
                 //mark it visited
                 for ("all nodes connected to it"){
-                    if ("specific node hasn't been visited"){
+                  If(graph[curr_index].visited == false){
                         dfs(mygraph, specificNode, find_value);//visit it   
                     }
                 }
