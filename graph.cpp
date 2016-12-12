@@ -58,4 +58,8 @@ int main(){
     newEdge(graph,9,8,2);
     newEdge(graph,9,11,5);
     newEdge(graph,8,10,11);
+    
+    free(Graph);
+    free(List);
+    free(Node);
 }
