@@ -7,7 +7,7 @@ using namespace std;
 struct Node* newNode(char data, int weight){
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data=data;
-    newNode->weight=weight;
+    newNode->visited=false;
     newNode->next=NULL;
     return newNode;
 }
@@ -44,11 +44,11 @@ void newEdge(struct Graph* graph, int source, int data, int weight){
 bool dfs(Graph* graph, char start_at, char find_value){
           
         if (start_at==find_value){
-            return 1;
+            return true;
         }
        else{
             if (graph[start_index].visited == false){
-                //mark it visited
+                graph[start_index].visited = true; //say we have visited it
                 for ("all nodes connected to it"){
                   If(graph[curr_index].visited == false){
                         dfs(mygraph, specificNode, find_value);//visit it   
