@@ -6,6 +6,7 @@
 struct Node{
     char data; //node name eg A,B,C
     int weight; //weight of edge
+    bool visited=0;
     struct Node* next; //pointer to next node in list
 };
 
